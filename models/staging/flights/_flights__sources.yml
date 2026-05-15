@@ -1,0 +1,5 @@
+sources:
+  - name: demo_src
+    tables:
+      - name: aircrafts
+      - name: seats
