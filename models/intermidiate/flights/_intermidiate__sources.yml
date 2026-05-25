@@ -1,5 +1,5 @@
 sources:
-  - name: main_staging
+  - name: main_intermidiate
     tables:
       - name: fct_bookings
         description: Брони
