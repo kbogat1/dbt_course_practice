@@ -1,0 +1,59 @@
+sources:
+  - name: main_staging
+    tables:
+      - name: fct_bookings
+        description: Брони
+        columns:
+          - name: book_ref
+            description: Код брони
+          - name: book_date
+            description: Дата бронирования
+          - name: total_amount
+            description: Общая стоимость
+      - name: fct_flights
+        description: Перелеты
+        columns:
+          - name: flight_id
+            description: Идентификатор перелета
+          - name: flight_no
+            description: Номер перелета
+          - name: scheduled_departure
+            description: Плановые дата/время вылета
+          - name: scheduled_arrival
+            description: Плановые дата/время прибытия
+          - name: departure_airport
+            description: Аэропорт вылета
+          - name: arrival_airport
+            description: Аэропорт прибытия
+          - name: status
+            description: Статус перелета
+          - name: aircraft_code
+            description: Код модели самолета
+          - name: actual_departure
+            description: Фактические дата/время вылета
+          - name: actual_arrival
+            description: Фактические дата/время прибытия
+      - name: fct_ticket_flights
+        description: Связь билетов и перелетов
+        columns:
+          - name: ticket_no
+            description: Номер билета
+          - name: flight_id
+            description: Идентификатор перелета
+          - name: fare_conditions
+            description: Условия перелета
+          - name: amount
+            description: Стоимость
+      - name: fct_tickets
+        description: Информация по билетам
+        columns:
+          - name: ticket_no
+            description: Номер билета
+          - name: book_ref
+            description: Код брони
+          - name: passenger_id
+            description: Идентификатор пассажира
+          - name: passenger_name
+            description: Наименование пассажира
+          - name: contact_data
+            description: Контактная информация

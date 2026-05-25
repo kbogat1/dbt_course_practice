@@ -32,5 +32,11 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   dbt_course_practice:
     # Config indicated by + and applies to all files under models/example/
+    staging:
+      +schema: staging
+    intermidiate:
+      +schema: intermidiate
+    marts:
+      +schema: marts
     example:
       +materialized: view
